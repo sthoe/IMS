@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .item {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .item input {
+            margin-left: 10px;
+        }
+
+        .low-stock {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management</h1>
+        
+        <form id="searchForm">
+            <h2>Search Item</h2>
+            <input type="text" id="searchQuery" placeholder="Search by name or ID" required />
+        </form>
+
+        <form id="newItemForm">
+            <h2>Add New Item</h2>
+            <input type="text" id="newItemName" placeholder="Item name" required />
+            <input type="number" id="newItemQuantity" placeholder="Quantity" required />
+            <input type="submit" value="Add Item" />
+        </form>
+
+        <div id="items"></div>
+    </div>
+
+    <script src="inventory.js"></script>
+</body>
+</html>
